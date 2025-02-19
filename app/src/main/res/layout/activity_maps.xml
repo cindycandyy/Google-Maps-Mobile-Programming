@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp" >
+
+            <EditText
+                android:id="@+id/idLokasiLat"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:hint="Latitude" />
+
+            <EditText
+                android:id="@+id/idLokasiLng"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:hint="Longitude" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/idZoom"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:hint="Zoom Level" />
+
+            <Button
+                android:id="@+id/idGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/idDaerah"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:hint="Tujuan" />
+
+            <Button
+                android:id="@+id/idCari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cari" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Layout for travel cost, transport type, and button -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <!-- Travel Cost -->
+        <TextView
+            android:id="@+id/idTravelCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="5dp"
+            android:editable="false"
+            android:hint="Harga"
+            android:minHeight="48dp" />
+
+        <!-- Transport Type Spinner -->
+        <Spinner
+            android:id="@+id/idTransportType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/transport_types"
+            android:minHeight="48dp" />
+
+        <!-- Payment Method Spinner -->
+        <Spinner
+            android:id="@+id/idPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/payment_methods"
+            android:minHeight="48dp" />
+
+        <!-- Spinner untuk Jumlah Penumpang -->
+        <Spinner
+            android:id="@+id/idPassengerCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/passenger_count"
+            android:minHeight="48dp" />
+
+        <!-- Button untuk Kondisi Penumpang -->
+        <Button
+            android:id="@+id/idPassengerCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Penumpang"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal"
+            android:textColor="@color/white"/>
+
+        <!-- Field untuk menambahkan catatan kepada pengemudi -->
+        <EditText
+            android:id="@+id/idDriverNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tambahkan catatan untuk pengemudi"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Set Destination Button -->
+        <Button
+            android:id="@+id/idSetDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@id/idPaymentMethod"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal"
+            android:textColor="@color/white"/>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+            </LinearLayout>
+</RelativeLayout>

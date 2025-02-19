@@ -1,0 +1,20 @@
+<resources>
+        <string-array name="transport_types">
+            <item>Sepeda Motor</item>
+            <item>Sepeda Listrik</item>
+            <item>Mobil</item>
+        </string-array>
+
+        <string-array name="payment_methods">
+            <item>Tunai</item>
+            <item>E-Wallet</item>
+            <item>Kartu Kredit</item>
+        </string-array>
+
+        <string-array name="passenger_count">
+            <item>1 Penumpang</item>
+            <item>>1 Penumpang</item>
+        </string-array>
+
+        <string name="app_name">tugas8</string>
+    </resources>
