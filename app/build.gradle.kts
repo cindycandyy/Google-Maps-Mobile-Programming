@@ -5,10 +5,9 @@ plugins {
 
 android {
     namespace = "com.example.tugas8"
-    compileSdk = 34
-
     defaultConfig {
         applicationId = "com.example.tugas8"
+        compileSdk = 34
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -40,6 +39,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
